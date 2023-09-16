@@ -458,5 +458,18 @@ nav .fas{
     .layer{
         width: 55%;
     }
-    
+    .layer a{
+        margin-top: 2px;
+        color: #d38585;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 10px;
+        border-radius: 50%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+    }
+    .layer a i{
+        line-height: 40px;
+    }
 }
