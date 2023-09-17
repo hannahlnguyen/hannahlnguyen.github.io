@@ -478,12 +478,16 @@ nav .fas{
         line-height: 40px;
     }
     .container .sub-title{
-        margin-right: 100px;
-        margin-left: 50px;
+        
+        margin-left: -55px;
         margin-top: 5px;
     }
     .container .row .about-col-2 .sub-title{
         margin-right: 50px;
+        margin-left: 55px;
         
+    }
+    .container .row .contact-left .sub-title{
+        margin-left: 40px;
     }
 }
