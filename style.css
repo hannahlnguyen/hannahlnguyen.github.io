@@ -80,7 +80,7 @@ nav ul li a:hover::after{
 /* ----------about---------- */
 #about{
     padding: 25px 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 .row{
@@ -154,7 +154,7 @@ font-size: 20px;
 /* ----------portfolio---------- */
 #portfolio{
     padding: 25px 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding-left: 110px;
 }
@@ -221,7 +221,7 @@ font-size: 20px;
 /* ----------contact---------- */
 #contact{
     padding: 25px 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 .contact-left{
@@ -391,7 +391,7 @@ nav .fas{
     .about-col-1 img{
         width: 80%;
         margin-top: -50px;
-        margin-left: 33px;
+        margin-left: 38px;
     }
     .about-col-2 p{
         font-size: 15px;
