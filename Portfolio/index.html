@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/339b4b5721.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hello world!<br>I'm <span>Hannah</span> Nguyen</h1>
+            <img src="images/portrait.png" class="doodle">
+        </div>
+    </div>
+</div>
+<!-- ----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a sophomore at Virginia Polytechnic Institute and State University majoring in Business Information Technology (Decision Support Systems) and minoring in Computer Science! My interests include Full Stack Development, AI/ML, Consulting, and Technology Ethics. In my free time (when I'm not coding) I create digital art!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onClick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onClick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onClick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Java</span><br>Course: CS 2114 Software Design & Data Structures</li>
+                        <li><span>Python</span><br>Course: ITP 100 Software Design</li>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Dec. 2023 - Current</span><br>Design Committee Lead at VT Hacks</li>
+                        <li><span>Sept. 2022 - Dec. 2023</span><br>Marketing Committee Chair at VT Hacks</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Aug. 2022 - May 2026</span><br>Business Information Technology (Decision Support Systems) major, Computer Science minor at Virginia Polytechnic Institute and State University</li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio---------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="images/femtech.png">
+                <div class="layer">
+                    <h3>FemTech</h3>
+                    <p>A creative twist on the Windows 95 OS to support women in STEM (HackViolet 2023 project)</p>
+                    <a href="https://pierretranva.github.io/hackviolet23/#3" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/yourehere.png">
+                <div class="layer">
+                    <h3>Portfolio Website</h3>
+                    <p>You're currently on it!</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/moresoon.png">
+                <div class="layer">
+                    <h3>More coming soon!</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------contact---------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> hannahn@vt.edu</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hannah-lam-nguyen" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/hannahlnguyen" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/Hannah Nguyen Resume 2024.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form class="row g-3" action="https://formsubmit.co/hannahn@vt.edu" method="POST">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
